@@ -110,23 +110,23 @@ body {
 .timerbar {
     position: absolute;
     display: block;
-    left:6.5%;
-    right: 5.5%;
+    left:15.5%;
+    right: 14.5%;
     top: 3.5%;
     height: 37px;
-    width:88%;
+    width:70%;
     opacity: .25;
     transition: opacity 30s;
     background-color: transparent;
     border: 2px;
     border-color: transparent;
     border-radius: 8px;
-    border-style: solid
+    border-style: solid;
 -webkit-animation: fadeout 15s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadeout 15s; /* Firefox < 16 */
         -ms-animation: fadeout 15s; /* Internet Explorer */
          -o-animation: fadeout 15s; /* Opera < 12.1 */
-            animation: fadeout 15s  
+            animation: fadeout 15s;  
   
 -webkit-animation: fadein 15s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 15s; /* Firefox < 16 */
@@ -315,7 +315,7 @@ body {
     color: white;
 }
 
-.timerbutton3 {
+#timerbutton3 {
     background-color: transparent;
     font-weight: normal;
     color: white; 
@@ -325,7 +325,7 @@ body {
     width: 75px; height: 30px;
 }
 
-.timerbutton3:hover {
+#timerbutton3:hover {
     border-color: lime;
     background-color: #f44336;
     color: white;
@@ -455,12 +455,12 @@ body {
     opacity: .15;
     transition: opacity 10s;
     bottom: 100px;
-    top: 25%
+    top: 25%;
 -webkit-animation: fadeout 15s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadeout 15s; /* Firefox < 16 */
         -ms-animation: fadeout 15s; /* Internet Explorer */
          -o-animation: fadeout 15s; /* Opera < 12.1 */
-            animation: fadeout 15s  
+            animation: fadeout 15s;  
   
 -webkit-animation: fadein 15s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 15s; /* Firefox < 16 */
@@ -493,18 +493,18 @@ body {
     width:80px;
     font-family: "Arial Narrow", Arial, sans-serif;
     font-size: 18px;
-    line-height:22px;
+    line-height: 20px;
     color: white;
     opacity: .15;
     transition: opacity 10s;
     bottom: 100px;
-    top: 25%
+    top: 25%;
 
 -webkit-animation: fadeout 15s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadeout 15s; /* Firefox < 16 */
         -ms-animation: fadeout 15s; /* Internet Explorer */
          -o-animation: fadeout 15s; /* Opera < 12.1 */
-            animation: fadeout 15s  
+            animation: fadeout 15s;  
   
 -webkit-animation: fadein 15s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 15s; /* Firefox < 16 */
@@ -527,7 +527,6 @@ body {
     text-align: left;
     background-color: transparent;
     font-size: 16px;
-    
     margin: 0px 0px;
     padding-top:2px;
     padding-bottom:2px;
@@ -619,6 +618,30 @@ body {
   font-weight:bold;
   text-decoration:underline;
 }
+
+#a{
+    visibility: visible;
+    position:absolute;
+    border:2px #666666 solid;
+    border-radius: 10px;
+    background-color: black;
+    font-size:20px;
+    font-family:"Verdana";
+    color:white;
+    text-align:center;
+    text-decoration:blink;
+    display: block;
+    align-items: center;    
+    right:3%;    
+    height: 22px;
+    width:25px;    
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-bottom: 1px;    
+    left:95%;    
+    top: 19%;
+}
+
 
 .zoomin {
     background-color: black; 
@@ -934,8 +957,8 @@ ul{list-style-type: disc; color:red
             <button class="timerbutton" id="speed16x" onClick="multiSupFwd()" value="16X">+16X</button>                       
             <button class="timerbutton timerbutton1" id="negative3">-4X<span class="tb1text">Click blue "Pause" button to the left first. Click here for 20" rewind loop, wait for completion! Then re-click or choose other player button.</span></button>
             <button class="timerbutton" id="timerbuttonreset" onclick="on0()">Repeat</button> 
-            <button class="timerbutton timerbutton3" onClick="onVideoNext()">Next</button>
-            <button class="timerbutton timerbutton3" onClick="onVideoBack()">Prior</button>
+            <!--<button class="timerbutton" id="timerbutton3">Next</button>
+            <button class="timerbutton" id="timerbutton3" onClick="onVideoBack()">Prior</button> -->
             <button class="timerbutton timerbutton6" href="#" onclick='window.open("https://41off.github.io/jm");return false;'>[\+/]<span class="tbtext">&nbsp;&nbsp;Click to open full seperate window.</span></button>
           </div> 
                
@@ -946,10 +969,12 @@ ul{list-style-type: disc; color:red
    
         <div class="controls"><span class="closebtn2">&#11097;</span> 
           </div> 
-              
-      <div id="modal"><span class="closebtn2">&#11097;</span> 
-          </div> 
-             
+   
+     
+     <div id="modal"><span class="closebtn2">&#11097;</span> 
+          </div>    
+                 
+                            
      <div class="playlist" style="text-align:center">
       <span class="closebtn2">&#11097;</span>
           <left>Playlist<br></left><br>
@@ -1157,7 +1182,7 @@ a){var b=F.exec(a);b&&(b[1]=(b[1]||"").toLowerCase(),b[3]=b[3]&&new RegExp("(?:^
  
   function multiStart() {
       var btn = document.getElementById("timerbutton5");
-      
+            
    /*   var w = window.open('','','width=300,height=30')
       
       setTimeout(function() {w.close();}, 5000)
@@ -1310,8 +1335,7 @@ a){var b=F.exec(a);b&&(b[1]=(b[1]||"").toLowerCase(),b[3]=b[3]&&new RegExp("(?:^
     timer.start(80);
     timer.mode(0);    
    }
-   
-  
+          
         var video_directory = ["https://player.vimeo.com/external/377888546.hd.mp4?s=b6c5478e3b4135d62f596e64e7737cfcd4e2a5ac&profile_id=175",
                                "https://player.vimeo.com/external/377887096.hd.mp4?s=6ce2e57d0b501ba8243642b5caa700e9f9430c37&profile_id=175",
                                "https://player.vimeo.com/external/377891026.hd.mp4?s=69bb73c100a8b777371dcde37de07499fd5e1910&profile_id=175",
@@ -1323,11 +1347,11 @@ a){var b=F.exec(a);b&&(b[1]=(b[1]||"").toLowerCase(),b[3]=b[3]&&new RegExp("(?:^
                               ];                             
  
   
-        var video_index = 0;
+        var video_index = 0;        
         var video_player = null;
-        var video = document.getElementById('video');  
-       
-                          
+        var video = document.getElementById('video');
+        
+                                    
       function onload(){
             console.log("body loaded");
             video_player = document.getElementById("video");
@@ -1335,8 +1359,9 @@ a){var b=F.exec(a);b&&(b[1]=(b[1]||"").toLowerCase(),b[3]=b[3]&&new RegExp("(?:^
             video_player.volume = 0.2;
             video_player.currentSrc();
             video_player.currentTime();
-            timer.start(10)
-        }
+            timer.start(10);
+       }
+         
         
        function onVideoEnded(){
             console.log("video ended");
@@ -1349,21 +1374,47 @@ a){var b=F.exec(a);b&&(b[1]=(b[1]||"").toLowerCase(),b[3]=b[3]&&new RegExp("(?:^
             video_player.setAttribute("src", video_directory[video_index]);
             video_player.play();
         }
-        
-       function onVideoNext(){
-            console.log("video next");
-            if(video_index < video_directory.length - 1){
-                video_index++;
-            }
-            else{
-                video_index = 1;
-            }
+  
+/*
+
+//Here is the HTML
+   <button id="btn">You have clicked this button <span id="btn-counter"></span></button>
+   
+Here is the Javascript
+// the button
+ var btn = document.getElementById("btn");
+
+ // the counter
+ var counter = document.getElementById("btn-counter");
+
+ // set the counter to 0
+ counter.innerHTML = 0;
+
+ // increment the counter by 1 everytime the user clicks on the button
+ btn.onclick = function()
+ {
+    counter.innerHTML++;
+ };
+ 
+    var next = document.getElementById("timerbutton3");
+    var number = document.getElementById("a");
+        number.innerHTML = 1;
+     next.onclick = function(){
+          console.log("video next");          
+          if(video_index < video_directory.length - 1){
+              video_index++;
+              number.innerHTML++;
+              }
+           else{
+                video_index = 0;
+                
+           }
             video_player = document.getElementById("video");
             video_player.setAttribute("src", video_directory[video_index]);
             video_player.play();
-        }
-        
-       function onVideoBack(){
+ }    
+     
+     function onVideoBack(){
             console.log("video back");
             if(video_index < video_directory.length - 1){
                 video_index--;
@@ -1375,7 +1426,11 @@ a){var b=F.exec(a);b&&(b[1]=(b[1]||"").toLowerCase(),b[3]=b[3]&&new RegExp("(?:^
             video_player.setAttribute("src", video_directory[video_index]);
             video_player.play();
         }
-        
+ */
+   
+  
+
+      
    //rewind below  
 $("#negative").click(function() { // button function for rewind
     video_player.pause();
