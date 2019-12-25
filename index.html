@@ -119,10 +119,10 @@ body {
     transition: opacity 30s;
     background-color: transparent;
     border: 2px;
-    border-color: transparent;
+    border-color: lime;
     border-radius: 8px;
-    border-style: solid;
--webkit-animation: fadeout 15s; /* Safari, Chrome and Opera > 12.1 */
+    border-style: double;
+    -webkit-animation: fadeout 15s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadeout 15s; /* Firefox < 16 */
         -ms-animation: fadeout 15s; /* Internet Explorer */
          -o-animation: fadeout 15s; /* Opera < 12.1 */
@@ -170,10 +170,11 @@ body {
 .timerbutton {
     text-align: center;
     text-decoration: none;
-    font-size: 13px;
+    font-size: 16px;
+    font-family:Verdana;
     line-height:2px;
-    margin: 0px 0px;
-    margin-top: 4px;
+    margin: 2px 2px;
+    margin-top: 2px;
     padding-top:1px;
     padding-bottom:1px;
     padding-left:3px;
@@ -203,8 +204,8 @@ body {
 
 .timerbutton1 .tb1text {
   visibility: hidden;
-  width: 180px;
-  height:85px;
+  width: 250px;
+  height:100px;
   background-color: black;
   color: #fff;
   text-decoration:blink;
@@ -245,6 +246,8 @@ body {
 #timerbutt1_8 {
     background-color: transparent;
     font-weight: normal;
+    width: 70px;
+    margin: 2px 2px;
     color: white; 
     border-color: transparent;
     border-radius: 10px;
@@ -260,6 +263,8 @@ body {
 #timerbutt1_16 {
     background-color: transparent;
     font-weight: normal;
+    width: 77px;
+    margin: 2px 2px;
     color: white; 
     border-color: transparent;
     border-radius: 10px;
@@ -275,7 +280,7 @@ body {
 .timerbutton .tbtext {
   visibility: hidden;
   width: 180px;
-  height:50px;
+  height: 80px;
   background-color: black;
   border-color: silver;
   color: white;
@@ -304,6 +309,8 @@ body {
     background-color: transparent;
     font-weight: normal;
     color: white; 
+    width: 70px;
+    margin: 2px 2px;
     border-color: transparent;
     border-radius: 10px;
     border-style:double;
@@ -322,7 +329,8 @@ body {
     border-color: transparent;
     border-radius: 10px;
     border-style:double;
-    width: 75px; height: 30px;
+    width: 80px; 
+    height: 30px;
 }
 
 #timerbutton3:hover {
@@ -383,7 +391,7 @@ body {
     border-color: transparent;
     border-radius: 10px;
     border-style:double;
-    width: 130px;
+    width: 160px;
 }
 
 #timerbutton5:hover {
@@ -398,7 +406,7 @@ body {
     border-color: lime;
     border-radius: 10px;
     border-style:double;
-    width: 40x;
+    width: 46x;
     Margin: auto;
 }
 
@@ -444,7 +452,7 @@ body {
     padding-left: 2px;
     background-color: transparent;
     border: 3px;
-    border-color: silver;
+    border-color: lime;
     border-radius: 12px;
     border-style: double;
     height:270px;
@@ -471,7 +479,7 @@ body {
 
 .controls:hover {
  background-color: #C0C0C0;
- border-color: lime;
+ border-color: white;
  opacity: 1;
  color: black;
  transition: opacity 2s;
@@ -486,7 +494,7 @@ body {
     padding-left:3px;
     background-color: transparent;
     border: 3px;
-    border-color: silver;
+    border-color: lime;
     border-radius: 12px;
     border-style: double;
     height:325px;
@@ -515,7 +523,8 @@ body {
 
 .playlist:hover {
    background-color: #C0C0C0;
-   border-color: lime;
+   border-color: white;
+   border-style: double;
    opacity: 1;
    color: blue;
    text-decoration:blink;
@@ -560,7 +569,8 @@ body {
   text-decoration:blink;
   font-weight:bold;
   text-align: center;
-  margin-left:5px;
+  padding-left: 5px;
+  margin-left: 0px;
   display: inline-flex;
   align-items: center;
   border-width:2px;
@@ -949,7 +959,7 @@ ul{list-style-type: disc; color:red
            <span class="closebtn2">&#11097;</span>
             <button class="timerbutton" id="timerbuttonreset" onClick="multiReset()">Reset</button> 
             <button id="timerbutton5" class="timerbutton" onClick="multiStart()" value="Play">Toggle Play/Pause<span class="tbtext">This Video Player seems to function better with Chrome browser.</span></button>
-            <button class="timerbutton" id="timerbutt1_8" onClick="multiSlow()" value="+1/8X">+1/8X<span class="tbtext">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Click twice to initiate.</span></button>
+            <button class="timerbutton" id="timerbutt1_8" onClick="multiSlow()" value="+1/8X">+1/8X<span class="tbtext">&nbsp;Click twice to initiate.</span></button>
             <button class="timerbutton" id="timerbutt1_16" onClick="multiSuperSlow()" value="+1/16x">+1/16X</button> 
             <button class="timerbutton timerbutton1" id="negative2">-1/8X<span class="tb1text">Click blue "Pause" button to the left first. Click here for 20" rewind loop, wait for completion! Then re-click or choose other player button.</span></button>
             <button class="timerbutton timerbutton1" id="negative" value="-1X">-1X<span class="tb1text">Click blue "Pause" button to the left first. Click here for 20" rewind loop, wait for completion! Then re-click or choose other player button.</span></button > 
@@ -959,7 +969,7 @@ ul{list-style-type: disc; color:red
             <button class="timerbutton" id="timerbuttonreset" onclick="on0()">Repeat</button> 
             <!--<button class="timerbutton" id="timerbutton3">Next</button>
             <button class="timerbutton" id="timerbutton3" onClick="onVideoBack()">Prior</button> -->
-            <button class="timerbutton timerbutton6" href="#" onclick='window.open("https://41off.github.io/jm");return false;'>[\+/]<span class="tbtext">&nbsp;&nbsp;Click to open full seperate window.</span></button>
+            <button class="timerbutton timerbutton6" href="#" onclick='window.open("https://41off.github.io/jm");return false;'>[\+/]<span class="tbtext">&nbsp;Click to open full seperate window.</span></button>
           </div> 
                
          <div class="timer">
