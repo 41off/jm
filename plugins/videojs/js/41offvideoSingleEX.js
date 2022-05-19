@@ -441,7 +441,7 @@
    }
 
   
-        var video_directory = ['https://www.dropbox.com/s/suurogn0ewu4luz/XJM-05-19-2022.mp4?raw=1',
+        var video_directory = ['https://www.dropbox.com/s/f5jo173toqm9w4k/XJM-05-19-2022-2k.mp4?raw=1',
                                'https://www.dropbox.com/s/ytezjwhhtz75z6d/XJM-08-27-2021-Rd2-S1.mp4?raw=1',
                                
                               
